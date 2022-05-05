@@ -1,0 +1,39 @@
+/* DEBUGGING ONLY
+* {
+    border: 1px solid black;
+}
+*/
+
+
+
+.navbar-sd-relentless {
+    background-color: #000141;
+    color: white;
+    justify-content: center;
+}
+
+.navbar-sd-relentless li a{
+    color: white;
+}
+
+.navbar-sd-relentless .nav-link {
+    color: white;
+}
+
+.navbar-sd-relentless .nav-pills .active {
+    background-color: #c7b358;
+    color: #000141;
+}
+
+.card-header {
+    background-color: #000141;
+    color: white;
+    justify-content: center;
+}
+
+.rounded-circle {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+}
