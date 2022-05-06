@@ -10,7 +10,14 @@
     background-color: #000141;
     color: white;
     justify-content: center;
+    padding-left: 50px;
+    padding-right: 50px;
 }
+
+.navbar-sd-relentless .navbar-toggler-icon {
+    background-color: #c7b358;
+}
+
 
 .navbar-sd-relentless li a{
     color: white;
@@ -20,9 +27,8 @@
     color: white;
 }
 
-.navbar-sd-relentless .nav-pills .active {
-    background-color: #c7b358;
-    color: #000141;
+.navbar-sd-relentless .active {
+    color: #c7b358;
 }
 
 .card-header {
@@ -36,4 +42,8 @@
     width: 200px;
     height: 200px;
     object-fit: contain;
+}
+
+.btn-sd-relentless {
+    background-color: #c7b358;
 }
