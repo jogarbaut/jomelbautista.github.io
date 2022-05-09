@@ -50,3 +50,11 @@
 .btn-sd-relentless {
     background-color: #c7b358;
 }
+
+.carousel-img {
+    display: block;
+    width: 100%;
+    height: 800px;
+    object-fit: cover;
+    object-position: top;
+}
