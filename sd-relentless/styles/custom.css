@@ -15,9 +15,12 @@
 }
 
 .navbar-sd-relentless .navbar-toggler-icon {
-    background-color: #c7b358;
+    background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path stroke='rgb(199, 179, 88)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>");
 }
 
+.navbar-sd-relentless .navbar-toggler {
+    border-color: #c7b358;
+}
 
 .navbar-sd-relentless li a{
     color: white;
