@@ -1,8 +1,9 @@
-/* DEBUGGING ONLY
+/*
 * {
     border: 1px solid black;
 }
 */
+
 
 
 
@@ -52,7 +53,7 @@
 }
 
 .carousel .carousel-item {
-    min-height: 750px;
+    min-height: 500px;
     background-color: white;
 }
 
@@ -60,9 +61,50 @@
     display: block;
     object-fit: cover;
     object-position: top;
-    min-height: 750px;
+    min-height: 500px;
     height: auto;
     width: 100%;
     margin: auto;
     opacity: .85;
+}
+
+.container-gray {
+    background-color: gray;
+}
+
+.blue-background {
+    background-color: #000141;
+}
+
+.yellow-background {
+    background-color: #c7b358;
+}
+
+.white-text {
+    color: white;
+}
+
+.yellow-text {
+    color: #c7b358;
+}
+
+.blue-text {
+    color: #000141;
+}
+
+.featurette-divider {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    margin-left: 3rem;
+    margin-right: 3rem;
+}
+
+.home-featurette {
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: calc(var(--bs-gutter-y) * -1);
+    margin-right: calc(var(--bs-gutter-x) * -.5);
+    margin-left: calc(var(--bs-gutter-x) * -.5);
 }
