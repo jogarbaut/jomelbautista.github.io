@@ -1,12 +1,43 @@
+/*----- CSS Reset ----- */
 * {
     margin: 0;
     padding: 0;
 }
 
+/*----- Body ----- */
 body {
-    padding-top: 70px;
+    padding-top: 75px;
+    padding-bottom: 75px;
+    position: relative;
 }
 
+/*----- Navbar ----- */
+.navbar {
+    background-color: #ec6001;
+}
+
+.navbar .collapse {
+    justify-content: center;
+}
+
+.nav-item {
+    color: white;
+}
+
+.active {
+    color: white;
+    background-color: #1a5b38
+}
+
+.navbar-toggler {
+    border: white;
+    color: white;
+    border-color: white;
+    background-color: white;
+}
+
+
+/*----- Video ----- */
 .video-container {
     position: relative;
     width: auto;
