@@ -6,7 +6,7 @@
 
 /*----- Body ----- */
 body {
-    padding-top: 100px;
+    padding-top: 75px;
     padding-bottom: 75px;
     position: relative;
 }
@@ -47,37 +47,52 @@ body {
     filter: invert(1);
 }
 
+.subtitle {
+    font-size: 1.5rem;
+    text-decoration: underline;
+    text-align: center;
+}
+
 /*----- About -----*/
 #about {
     background-color: rgba(248, 242, 231, 1);
-    padding-top: 100px;
-    padding-bottom: 100px;
+    padding-top: 75px;
+    padding-bottom: 75px;
 }
 
 #about .row {
     display: flex;
 }
 
-#about .row.header p{
+#about .small-header-text {
     padding-bottom: 10px;
     color: rgba(21, 84, 50, 1);
-    font-size: 2rem;
+    font-size: 1.25rem;
 }
 
-#large-header-text {
+#about .medium-header-text {
+    padding-bottom: 10px;
+    color: rgba(21, 84, 50, 1);
+    font-size: 2.5rem;
+    margin-left: 10px;
+}
+
+#about .large-header-text {
+    padding-bottom: 10px;
+    color: rgba(21, 84, 50, 1);
     font-size: 4rem;
+    margin-left: 10px;
 }
 
 #about .card {
     padding: 15px;
-    margin-bottom: 25px;
+    margin-bottom: 15px;
     justify-content: space-around;
     align-items: center;
     background-color: rgba(21, 84, 50, 1);
     color: white;
     border: none;
     height: 100%;
-    border-radius: 25px;
 }
 
 #about .card .card-body {
@@ -89,9 +104,66 @@ body {
     text-align: center;
 }
 
-#about .col-lg-5 {
-    margin-bottom: 25px;
+.col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6 {
+    margin-bottom: 15px;
 }
+
+/*----- Meet The Doctor -----*/
+
+#meet-the-doctor {
+    background-color: rgba(248, 242, 231, 1);
+    padding-top: 75px;
+    padding-bottom: 75px;
+}
+
+#meet-the-doctor .small-header-text {
+    padding-bottom: 10px;
+    color: black;
+    font-size: 1.25rem;
+}
+
+#meet-the-doctor .medium-header-text {
+    padding-bottom: 10px;
+    color: black;
+    font-size: 2.5rem;
+    margin-left: 10px;
+}
+
+#meet-the-doctor .large-header-text {
+    padding-bottom: 10px;
+    color: black;
+    font-size: 4rem;
+    margin-left: 10px;
+}
+
+#meet-the-doctor .card-portrait {
+    border: none;
+}
+
+#portrait-body-title {
+    background-color: white;
+    color: black;
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 25px;
+}
+
+#img-portrait {
+    max-width: 100%;
+    height: auto;
+}
+
+#meet-the-doctor .card-about {
+    border: none;
+    background-color: white;
+    color: black;
+    padding: 15px;
+    margin-bottom: 15px;
+    text-align: left;
+    justify-content: space-around;
+}
+
+
 
 /*----- Video ----- */
 .video-container {
