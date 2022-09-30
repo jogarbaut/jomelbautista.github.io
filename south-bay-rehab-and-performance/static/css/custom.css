@@ -6,8 +6,8 @@
 
 /*----- Body ----- */
 body {
-    padding-top: 75px;
-    padding-bottom: 75px;
+    padding-top: 50px;
+    padding-bottom: 50px;
     position: relative;
 }
 
@@ -39,6 +39,15 @@ body {
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(13,83,47,255)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
 }
 
+#page-header {
+    margin: 25px;
+    text-align: center;
+}
+
+#page-subheader {
+    margin: 35px;
+}
+
 /*----- Icons -----*/
 .icon-image {
     margin: 10px;
@@ -54,8 +63,13 @@ body {
 }
 
 /*----- About -----*/
+#home {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+/*----- About -----*/
 #about {
-    background-color: rgba(248, 242, 231, 1);
     padding-top: 75px;
     padding-bottom: 75px;
 }
@@ -111,7 +125,6 @@ body {
 /*----- Meet The Doctor -----*/
 
 #meet-the-doctor {
-    background-color: rgba(248, 242, 231, 1);
     padding-top: 75px;
     padding-bottom: 75px;
 }
@@ -138,6 +151,7 @@ body {
 
 #meet-the-doctor .card-portrait {
     border: none;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
 #portrait-body-title {
@@ -158,9 +172,10 @@ body {
     background-color: white;
     color: black;
     padding: 15px;
-    margin-bottom: 15px;
+    margin-bottom: 25px;
     text-align: left;
     justify-content: space-around;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
 
