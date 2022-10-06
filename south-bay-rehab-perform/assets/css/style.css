@@ -4,6 +4,8 @@
 :root {
     --c-brand: #ea6103;
     --c-brand-rgb: 255, 165, 0;
+    --c-brand-alt: #115833;
+    --c-brand-alt-rgb: 17, 88, 51;
     --c-dark: #0e0f0d;
     --c-body: #b1b9bf;
     --f-main: "Montserrat", sans-serif;
@@ -44,6 +46,10 @@ img {
     padding-bottom: 120px;
 }
 
+.section-sub-padding {
+    padding-top: 60px;
+}
+
 .text-brand {
     color: var(--c-brand);
 }
@@ -58,6 +64,7 @@ img {
     height: 2px;
     background-color: var(--c-brand);
     display: inline-block;
+    justify-items: center;
 }
 
 .section-connector {
