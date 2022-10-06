@@ -13,7 +13,7 @@
 
 /* Reset & Helpers*/
 body {
-    padding: 0;
+    padding-top: 0px;
     margin: 0;
     font-family: var(--f-main);
     color: var(--c-body);
@@ -109,7 +109,7 @@ iframe {
 }
 
 .navbar .navbar-nav .nav-link {
-    font-weight: 800;
+    font-weight: 700;
     color: var(--c-dark);
 }
 
@@ -154,18 +154,37 @@ iframe {
 }
 
 .btn-brand:hover {
-    background-color: transparent;
+    background-color: white;
     color: var(--c-brand);
     border-color: var(--c-brand);
 }
 
 /* Home */
 #home {
-    background-image: url(../img/headshot.jpeg);
-    background-position: center;
-    background-size: cover;
+    position: relative;
 }
 
+#home::before {
+    content: "";
+    background-image: url(../img/headshot.jpeg);
+    background-position: top center;
+    background-size: cover;
+    opacity: .6;
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+}
+
+#home .landing-text {
+    position: relative;
+}
+
+#home .landing-text .background-mask {
+    background-color: rgba(0, 0, 0, .75);
+    padding: 20px;
+}
 
 /* Services */
 .service-icon {
@@ -248,12 +267,12 @@ iframe {
     height: 30px;
 }
 
-/* Resume */
-.eduexp {
+/* Bio */
+.bio {
     position: relative;
 }
 
-.eduexp::before {
+.bio::before {
     content: '';
     height: 100%;
     width: 1px;
@@ -263,7 +282,7 @@ iframe {
     top: 0;
 }
 
-.eduexp::after {
+.bio::after {
     content: '';
     height: 14px;
     width: 14px;
