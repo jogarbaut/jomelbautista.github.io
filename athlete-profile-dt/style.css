@@ -187,3 +187,22 @@ section {
     height: 100%;
     background: rgba(0, 0, 0, 0.3);
 }
+
+/*----- Athlete Bio -----*/
+
+.card.bio {
+    color: black;
+    background-color: white;
+    margin-bottom: 20px;
+}
+
+.card.bio .card-icon {
+    max-height: 80%;
+    position: absolute;
+    transform: translate(-20%, -35%);
+    background-color: white;
+}
+
+.card.bio .card-body {
+    margin-left: 10%;
+}
