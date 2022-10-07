@@ -164,6 +164,10 @@ iframe {
     position: relative;
 }
 
+#home .container {
+    margin-bottom: 15%;
+}
+
 #home::before {
     content: "";
     background-image: url(../img/headshot.jpeg);
@@ -184,6 +188,12 @@ iframe {
 #home .landing-text .background-mask {
     background-color: rgba(0, 0, 0, .75);
     padding: 20px;
+}
+
+/* Updates */
+.twitter-timeline {
+    padding-left: 10%;
+    padding-right: 10%;
 }
 
 /* Services */
