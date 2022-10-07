@@ -348,3 +348,50 @@ img {
     left: -7px;
     top: 0;
 }
+
+/* Contact */
+#contact .form-control {
+    border-radius: 0;
+}
+
+#contact .form-control:focus {
+    box-shadow: none;
+    border-color: var(--c-brand);
+}
+
+#contact input.form-control {
+    height: 44px;
+}
+
+/* Footer */
+footer {
+    background-color: var(--c-dark);
+    padding-top: 75px;
+}
+
+footer h4 {
+    color: white;
+}
+
+footer .text-white {
+    color: white;
+}
+
+footer p, footer li, footer li a {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-top {
+    padding-bottom: 40px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-bottom {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
