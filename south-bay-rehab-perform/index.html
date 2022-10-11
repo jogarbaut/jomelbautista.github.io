@@ -7,6 +7,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
     <link rel="stylesheet" href="./assets/css/style.css">
     <title>South Bay Rehab and Performance</title>
 </head>
@@ -14,7 +15,7 @@
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg fixed-top" id="navbar">
         <div class="container">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand align-items-center" href="#">
                 <img src="./assets/img/south-bay-rehab-performance-logo.png" alt="">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -56,13 +57,14 @@
     <!-- Home -->
     <section id="home" class="d-flex align-items-center min-vh-100">
         <section class="showcase">
-            <video src="./assets/img/south_bay_intro.mp4" autoplay muted loop></video>
+            <video src="./assets/img/south_bay_intro.mp4" playsinline autoplay muted loo></video>
             <div class="overlay"></div>
             <div class="text">
                 <h2></h2>
-                <h3>Learn the Tools</h3>
-                <p>to build a resilient body and live a pain free life.</p>
-                <a href="#" class="btn btn-brand">Schedule an Appointment</a>
+                <h3 class="fw-bold" data-aos="fade-right">Learn the Tools</h3>
+                <p data-aos="fade-right" data-aos-delay="200">to build a resilient body and live a pain free life.</p>
+                <div data-aos="fade-right" data-aos-delay="300"><a href="https://southbayrandp.janeapp.com/#/staff_member/1/treatment/1" class="btn btn-brand" id="btn-showcase">Schedule an Appointment</a></div>
+
             </div>
         </section>
     </section>
@@ -72,23 +74,23 @@
         <div class="container">
             <div class="row mb-3">
                 <div class="col-md-6">
-                    <div class="section-title text-center">
+                    <div class="section-title text-center" data-aos="fade-up" data-aos-delay="100">
                         <h2>About Dr. Takashi Kumagai Huynh, D.C.</h2>
                         <p>His motivation for healthcare stems from an extensive personal struggle against his own body during his adolescence. In his youth, he visited countless doctors and underwent various tests, where unfortunately none of the doctors were able to specify what was going on. After years of tests, one doctor was able to diagnose him with a rare genetic disorder in fifteen short minutes just by listening to his symptoms. From there on, he knew that he wanted to instill that same relief to his patients. In his free time, he loves being active by playing basketball and running with friends. He also enjoys cooking new recipes to eat… which drives him to keep being active!</p>
                         <div class="line"></div>
                     </div>
                 </div>
-                <div class="col-md-6 text-center">
+                <div class="col-md-6 text-center" data-aos="fade-up" data-aos-delay="200">
                     <img src="./assets/img/headshot-doctor-white-bg.png" alt="" class="img-fluid" id="img-headshot">
                 </div>
             </div>
             <div class="row section-sub-padding">
-                <div class="section-title text-center">
+                <div class="section-title text-center" data-aos="fade-up" data-aos-delay="100">
                     <h4>Education, Experience, & Certifications</h4>
                 </div>
             </div>
             <div class="row gy-5 justify-content-center">
-                <div class="col-md-4">
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
                     <div class="row">
                         <div class="col-12">
                             <div class="eduexp p-5 pt-0">
@@ -107,7 +109,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
                     <div class="row">
                         <div class="col-12">
                             <div class="eduexp p-5 pt-0">
@@ -125,7 +127,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
                     <div class="row">
                         <div class="col-12">
                             <div class="eduexp p-5 pt-0">
@@ -208,9 +210,10 @@
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <div class="section-title text-center">
+                    <div class="section-title text-center" data-aos="fade-up" data-aos-delay="100">
                         <h1>Clinic Services & Scheduler</h1>
                         <p>Dr. Huynh separates himself from other chiropractors by figuring out the root cause of the pain and giving corrective exercises along with mobility training and load to address any issue. He believes that soft tissue work and adjustments are great and necessary but fixing the movement pattern issue is what he believes will have a lasting affect.</p>
+                        <p class="text-brand">You will redirected to our booking platform, Jane App.</p>
                         <div class="line"></div>
                     </div>
                 </div>
@@ -218,11 +221,11 @@
             <div class="row gy-4 justify-content-between mb-3">
                 <div class="col-lg-6">
                     <div class="row gy-4 mb-3">
-                        <div class="service py-5 px-4 border">
+                        <div class="service py-5 px-4 border" data-aos="fade-up" data-aos-delay="100">
                             <h5 class="mt-3">New Patients Eval & Treatment (First Visit)</h5>
                             <p>Recommended for first time patients. A thorough history of the chief complaint and other health history screening will be done. Followed by some sort of movement assessment, breath work, soft tissue (IASTM and cupping if needed), adjustment, and corrective exercise.</p>
                             <p>Visit our <a href="#blog" class="text-brand">Clinic Videos </a>section to get an idea of what your first visit may look like.</p>
-                            <a href="#" class="custom-link">
+                            <a href="https://southbayrandp.janeapp.com/#/staff_member/1/treatment/1" class="custom-link">
                                 <span>Schedule</span>
                                 <i class="ri-arrow-right-line"></i>
                             </a>
@@ -231,40 +234,40 @@
                 </div>
                 <div class="col-lg-5">
                     <div class="row gy-4 mb-3">
-                        <div class="service py-3 px-4 border">
+                        <div class="service py-3 px-4 border" data-aos="fade-up" data-aos-delay="200">
                             <h5 class="mt-1">Follow Up</h5>
                             <p>Taking the next step towards building physical and mental resiliency.</p>
-                            <a href="#" class="custom-link">
+                            <a href="https://southbayrandp.janeapp.com/#/staff_member/1/treatment/2" class="custom-link">
                                 <span>Schedule</span>
                                 <i class="ri-arrow-right-line"></i>
                             </a>
                         </div>
                     </div>
                     <div class="row gy-4 justify-content-center mb-3">
-                        <div class="service py-3 px-4 border">
+                        <div class="service py-3 px-4 border" data-aos="fade-up" data-aos-delay="200">
                             <h5 class="mt-1">Adjustment Only</h5>
                             <p>For patients who want to come in solely for adjustments. Some soft tissue will be done. Although this option is offered, we highly recommend the full follow-up. Exercises and load are what's going to create a long term change.</p>
-                            <a href="#" class="custom-link">
+                            <a href="https://southbayrandp.janeapp.com/#/staff_member/1/treatment/3" class="custom-link">
                                 <span>Schedule</span>
                                 <i class="ri-arrow-right-line"></i>
                             </a>
                         </div>
                     </div>
                     <div class="row gy-4 justify-content-center mb-3">
-                        <div class="service py-3 px-4 border">
+                        <div class="service py-3 px-4 border" data-aos="fade-up" data-aos-delay="200">
                             <h5 class="mt-1">Cupping & Bladding</h5>
                             <p></p>
-                            <a href="#" class="custom-link">
+                            <a href="https://southbayrandp.janeapp.com/#/staff_member/1/treatment/6" class="custom-link">
                                 <span>Schedule</span>
                                 <i class="ri-arrow-right-line"></i>
                             </a>
                         </div>
                     </div>
                     <div class="row gy-4 justify-content-center mb-3">
-                        <div class="service py-3 px-4 border">
+                        <div class="service py-3 px-4 border" data-aos="fade-up" data-aos-delay="200">
                             <h5 class="mt-1">Consult</h5>
                             <p>Unsure and what to have a brief discussion about possible options? Consults are available!</p>
-                            <a href="#" class="custom-link">
+                            <a href="https://southbayrandp.janeapp.com/#/staff_member/1/treatment/9" class="custom-link">
                                 <span>Schedule</span>
                                 <i class="ri-arrow-right-line"></i>
                             </a>
@@ -287,49 +290,34 @@
                     </div>
                 </div>
             </div>
-            <div class="row gy-5">
+            <div class="row gy-5 justify-content-between">
                 <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
                     <div class="blog-post">
-                        <!-- <iframe src="https://www.youtube.com/embed/DV43F0hJFZ8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
-                        <i class="ri-youtube-line"></i>
+                        <iframe src="https://www.youtube.com/embed/XuJrAW6WviA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                         <div class="blog-post-content pt-4">
                             <h3>First Time Visit</h3>
                             <small class="text-brand">Video</small>
                             <p>Here is what to expect on your first visit to our clinic.</p>
-                            <!-- <a href="#" class="custom-link">
-                                <span>Read More</span>
-                                <i class="ri-arrow-right-line"></i>
-                            </a> -->
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                <div class="col-md-3" data-aos="fade-up" data-aos-delay="200">
                     <div class="blog-post">
-                        <!-- <iframe src="https://www.youtube.com/embed/DV43F0hJFZ8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
-                        <i class="ri-youtube-line"></i>
+                        <iframe src="https://www.youtube.com/embed/8HtLzUKauc4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                         <div class="blog-post-content pt-4">
-                            <h3>90-90's</h3>
+                            <h3>Mobility Before Visit</h3>
                             <small class="text-brand">Video</small>
-                            <p>Doctor breaks down one of his most critical exercises for hip mobility.</p>
-                            <!-- <a href="#" class="custom-link">
-                                <span>Read More</span>
-                                <i class="ri-arrow-right-line"></i>
-                            </a> -->
+                            <p>Here is movement and range of motion before visit.</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
                     <div class="blog-post">
-                        <!-- <iframe src="https://www.youtube.com/embed/DV43F0hJFZ8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
-                        <i class="ri-youtube-line"></i>
+                        <iframe src="https://www.youtube.com/embed/xYx4YhXftmE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                         <div class="blog-post-content pt-4">
-                            <h3>Hip CARS</h3>
+                            <h3>Mobility After Visit</h3>
                             <small class="text-brand">Video</small>
-                            <p>Doctor breaks down one of his most critical exercises for hip mobility.</p>
-                            <!-- <a href="#" class="custom-link">
-                                <span>Read More</span>
-                                <i class="ri-arrow-right-line"></i>
-                            </a> -->
+                            <p>Here is movement and range of motion <span class="text-brand">after</span> visit.</p>
                         </div>
                     </div>
                 </div>
@@ -342,46 +330,33 @@
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <div class="section-title text-center">
+                    <div class="section-title text-center" data-aos="fade-up" data-aos-delay="100">
                         <h1>Testimonials</h1>
-                        <p></p>
+                        <p>To view more testimonials or to leave one, please visit our <a href="https://www.yelp.com/biz/south-bay-rehab-and-performance-cupertino-5" class=text-brand>Yelp</a> page or our <a href="https://www.google.com/search?q=google+review+south+bay+performance+and+rehab&oq=google+review+south+bay+performance+and+rehab&aqs=chrome..69i57j69i64j69i60l2.5209j0j7&sourceid=chrome&ie=UTF-8#lrd=0x808fb58e41eadc7b:0x23f7196e2e4080be,1,,," class="text-brand"> Google Reviews</a> page.</p>
                         <div class="line"></div>
                     </div>
                 </div>
             </div>
-            <div class="row">
+            <div class="testimonial-carousel row" data-aos="fade-up" data-aos-delay="100">
                 <div id="carouselExampleControls" class="carousel slide" data-bs-interval="false">
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                            <div class="row justify-content-center">
-                                <div class="col-sm-3">
-                                    <div class="testimonial-box">
-                                        <div class="h5">Trevor P.</div>
-                                        <p class="text-brand mb-0">1 month ago</p>
-                                        <div class="testimonial-star">
-                                            <i class="ri-star-fill"></i>
-                                            <i class="ri-star-fill"></i>
-                                            <i class="ri-star-fill"></i>
-                                            <i class="ri-star-fill"></i>
-                                            <i class="ri-star-fill"></i>
-                                        </div>
-                                        <p class="testimonial-text">"I initially came in to see Dr. Huynh for a shoulder injury that came from lifting weights. After I saw how diligent and passionate he was about his work, it was easy to see why he was so good at what he does. I now visit him whenever I have any sort of nagging pain and he is able to get down to the root cause of the injury and diagnose it. Not only does he heal the pain, he is proactive in helping me maintain an injury free life. I would recommend Dr. Huynh to anyone that is thinking about living without physical pain."</p>
-                                    </div>
+                            <div class="testimonial-box">
+                                <div class="h5">Trevor P.</div>
+                                <p class="text-brand mb-0">1 month ago</p>
+                                <div class="testimonial-star">
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
                                 </div>
-                                <div class="col-sm-3">
-                                    <div class="h5">Judy X.</div>
-                                    <p class="text-brand mb-0">3 months ago</p>
-                                    <div class="testimonial-star">
-                                        <i class="ri-star-fill"></i>
-                                        <i class="ri-star-fill"></i>
-                                        <i class="ri-star-fill"></i>
-                                        <i class="ri-star-fill"></i>
-                                        <i class="ri-star-fill"></i>
-                                    </div>
-                                    <p class="testimonial-text">Dr Huynh is very professional and actually listens to your concerns. He's very patient and walks you through his exercises while being attentive to how you follow through with them/gives you constructive feedback.<br>He was also respectful and as a person who hates being touched, he always made sure I felt okay and let me know ahead of time where he needed to adjust me, which I appreciated. I felt that I was treated very well at Dr Huynh's clinic and he also sends you home with a take-home program of exercises. I came in with hip pain and after doing his exercises 4 times a week (even though he instructed everyday), the pain in my hip has greatly improved and I am able to work out more comfortably now.<br>I would recommend him to my friends and family.
-                                    </p>
-                                </div>
-                                <div class="col-sm-3">
+                                <p class="testimonial-text">"I initially came in to see Dr. Huynh for a shoulder injury that came from lifting weights. After I saw how diligent and passionate he was about his work, it was easy to see why he was so good at what he does. I now visit him whenever I have any sort of nagging pain and he is able to get down to the root cause of the injury and diagnose it. Not only does he heal the pain, he is proactive in helping me maintain an injury free life. I would recommend Dr. Huynh to anyone that is thinking about living without physical pain."</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="row">
+                                <div class="testimonial-box">
                                     <div class="h5">Andrew P.</div>
                                     <p class="text-brand mb-0">5 months ago</p>
                                     <div class="testimonial-star">
@@ -398,21 +373,40 @@
                         </div>
                         <div class="carousel-item">
                             <div class="row justify-content-center">
-                                <div class="col-sm-3">
-                                    <div class="testimonial-box">
-                                        <div class="h5">Judy N.</div>
-                                        <p class="text-brand mb-0">2 months ago</p>
-                                        <div class="testimonial-star">
-                                            <i class="ri-star-fill"></i>
-                                            <i class="ri-star-fill"></i>
-                                            <i class="ri-star-fill"></i>
-                                            <i class="ri-star-fill"></i>
-                                            <i class="ri-star-fill"></i>
-                                        </div>
-                                        <p class="testimonial-text">"Dr Huynh is very professional and actually listens to your concerns. He's very patient and walks you through his exercises while being attentive to how you follow through with them/gives you constructive feedback. He was also respectful and as a person who hates being touched, he always made sure I felt okay and let me know ahead of time where he needed to adjust me, which I appreciated. I felt that I was treated very well at Dr Huynh's clinic and he also sends you home with a take-home program of exercises. I came in with hip pain and after doing his exercises 4 times a week (even though he instructed everyday), the pain in my hip has greatly improved and I am able to work out more comfortably now. I would recommend him to my friends and family."</p>
+                                <div class="testimonial-box">
+                                    <div class="h5">Judy X.</div>
+                                    <p class="text-brand mb-0">3 months ago</p>
+                                    <div class="testimonial-star">
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
                                     </div>
+                                    <p class="testimonial-text">Dr Huynh is very professional and actually listens to your concerns. He's very patient and walks you through his exercises while being attentive to how you follow through with them/gives you constructive feedback.<br>He was also respectful and as a person who hates being touched, he always made sure I felt okay and let me know ahead of time where he needed to adjust me, which I appreciated. I felt that I was treated very well at Dr Huynh's clinic and he also sends you home with a take-home program of exercises. I came in with hip pain and after doing his exercises 4 times a week (even though he instructed everyday), the pain in my hip has greatly improved and I am able to work out more comfortably now.<br>I would recommend him to my friends and family.
+                                    </p>
                                 </div>
-                                <div class="col-sm-3">
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="row justify-content-center">
+                                <div class="testimonial-box">
+                                    <div class="h5">Judy N.</div>
+                                    <p class="text-brand mb-0">2 months ago</p>
+                                    <div class="testimonial-star">
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                    </div>
+                                    <p class="testimonial-text">"Dr Huynh is very professional and actually listens to your concerns. He's very patient and walks you through his exercises while being attentive to how you follow through with them/gives you constructive feedback. He was also respectful and as a person who hates being touched, he always made sure I felt okay and let me know ahead of time where he needed to adjust me, which I appreciated. I felt that I was treated very well at Dr Huynh's clinic and he also sends you home with a take-home program of exercises. I came in with hip pain and after doing his exercises 4 times a week (even though he instructed everyday), the pain in my hip has greatly improved and I am able to work out more comfortably now. I would recommend him to my friends and family."</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="row justify-content-center">
+                                <div class="testimonial-box">
                                     <div class="h5">Singh I.</div>
                                     <p class="text-brand mb-0">4 months ago</p>
                                     <div class="testimonial-star">
@@ -425,7 +419,11 @@
                                     <p class="testimonial-text">I came in for shoulder rehab and Takashi put me through the best exercises. I am a collegiate athlete however I trust Takashi with his work and getting my shoulder right. I went in and told him what was wrong and right away he knew what exercises to put me through and he did hands on work to the shoulder which was amazing. He was very professional and easy to talk to and did a great job with my shoulder. The best part is he still keeps in touch and asks about my shoulder almost once a week and gives me more exercises to do to strengthen the shoulder.
                                     </p>
                                 </div>
-                                <div class="col-sm-3">
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="row justify-content-center">
+                                <div class="testimonial-box">
                                     <div class="h5">George I.</div>
                                     <p class="text-brand mb-0">5 months ago</p>
                                     <div class="testimonial-star">
@@ -522,9 +520,9 @@
                     <div class="col-md-4">
                         <h4>Contact</h4>
                         <ul>
-                            <li><a href="#">Email: takhuynhmovement@gmail.com</a></li>
-                            <li><a href="#">Address: 21629 Stevens Creek Boulevard, Cupertino, CA 95014 (USA)</a></li>
-                            <li><a href="#">Phone Number: +1 (650) 564-3538</a></li>
+                            <li>Email: takhuynhmovement@gmail.com</li>
+                            <li>Address: 21629 Stevens Creek Boulevard, Cupertino, CA 95014 (USA)</li>
+                            <li>Phone Number: +1 (650) 564-3538</li>
                         </ul>
                     </div>
                 </div>
@@ -546,6 +544,8 @@
 
     <!-- JavaScript Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    <!-- Animate On Scroll -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <!-- Fancybox -->
     <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
     <!-- Custom JavaScript -->
