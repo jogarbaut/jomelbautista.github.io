@@ -168,6 +168,11 @@ img {
     background-color: transparent;
 }
 
+#yelp-icon {
+    padding: 25%;
+    filter: invert(1);
+}
+
 /* Button */
 .btn {
     padding: 10px;
