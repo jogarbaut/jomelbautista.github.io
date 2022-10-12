@@ -14,39 +14,6 @@
     --shadow: 0px 15px 40px rgba(0, 0, 0, 0.1);
 }
 
-/* Media Queries */
-@media (min-width: 992px) {
-    .navbar-expand-lg .navbar-nav .nav-link {
-        padding-right: 16px;
-        padding-left: 16px;
-    }
-}
-
-@media sceen and (max-width: 992px) {
-    .navbar-brand img {
-        width: 5px;
-        vertical-align: middle;
-    }
-
-    .showcase .text{
-        padding-left: 10%;
-        padding-right: 10%;
-        padding-top: 80%;
-        font-size: .75rem;
-    }
-
-    #resume, #resume-about, #services, #blog, #testimonials, #contact, footer {
-        padding-left: 7.5%;
-        padding-right: 7.5%;
-    }
-
-    #testimonials .testimonial-text {
-        margin: auto;
-        height: 200px;
-        overflow: scroll;
-    }
-}
-
 /* Reset & Helpers*/
 body {
     padding: 0;
@@ -506,4 +473,37 @@ footer ul {
 
 .thanks-hidden {
     display: none;
+}
+
+/* Media Queries */
+@media (min-width: 992px) {
+    .navbar-expand-lg .navbar-nav .nav-link {
+        padding-right: 16px;
+        padding-left: 16px;
+    }
+}
+
+@media (max-width: 992px) {
+    .navbar-brand img {
+        width: 10px;
+        vertical-align: middle;
+    }
+
+    .showcase .text{
+        padding-left: 10%;
+        padding-right: 10%;
+        padding-top: 80%;
+        font-size: .75rem;
+    }
+
+    #resume, #resume-about, #services, #blog, #testimonials, #contact, footer {
+        padding-left: 7.5%;
+        padding-right: 7.5%;
+    }
+
+    #testimonials .testimonial-text {
+        margin: auto;
+        height: 200px;
+        overflow: scroll;
+    }
 }
