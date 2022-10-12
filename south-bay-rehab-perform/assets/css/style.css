@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap'); */
 
 /* Variables */
 :root {
@@ -7,8 +8,8 @@
     --c-brand-alt: #115833;
     --c-brand-alt-rgb: 17, 88, 51;
     --c-dark: #0e0f0d;
-    --c-body: #b1b9bf;
-    --f-main: "Montserrat", sans-serif;
+    --c-body: #838383;
+    --f-main: "Inter";
     --transition: all .6s cubic-bezier(.165, .84, .44, 1);
     --shadow: 0px 15px 40px rgba(0, 0, 0, 0.1);
 }
@@ -135,6 +136,7 @@ img {
 .navbar-brand img {
     height: 40px;
     object-fit: contain;
+    margin: auto;
 }
 
 .social-icon {
@@ -181,10 +183,10 @@ img {
 
 .showcase {
     position: relative;
-    left: 0;
+    right: 0;
     width: 100%;
     min-height: 100vh;
-    padding: 100px;
+    padding-left: 2.5%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -209,8 +211,8 @@ img {
     position: absolute;
     top: 0;
     left: 0;
-    max-width: 100%;
-    min-height: 100%;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
     object-position: center;
     opacity: .65;
@@ -249,9 +251,15 @@ img {
     position: absolute;
     top: 0;
     left: 0;
-    max-width: 100%;
-    min-height: 100%;
+    width: 100%;
+    min-height: 100vh;
     background: rgba(0, 0, 0, 0);
+}
+
+.showcase #disclaimer-text {
+    font-size: .75rem;
+    font-weight: 100;
+    font-style: italic;
 }
 
 #btn-showcase:hover {
