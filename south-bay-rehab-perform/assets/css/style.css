@@ -22,10 +22,9 @@
     }
 }
 
-@media (max-width: 992px) {
+@media sceen and (max-width: 992px) {
     .navbar-brand img {
-        width: 50px;
-        object-fit: contain;
+        width: 5px;
         vertical-align: middle;
     }
 
