@@ -140,7 +140,7 @@
             <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="200">
                 <div class="col-lg-7">
                     <div class="embed-responsive">
-                        <a class="twitter-timeline" data-width="auto" data-height="400" data-theme="light" href="https://twitter.com/tuasonderek?ref_src=twsrc%5Etfw">Tweets by tuasonderek</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                        <a class="twitter-timeline" data-width="auto" data-height="600" data-theme="light" href="https://twitter.com/tuasonderek?ref_src=twsrc%5Etfw">Tweets by tuasonderek</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
                     </div>
                 </div>
             </div>
@@ -256,46 +256,33 @@
             </div>
             <!-- Stats Line Chart -->
             <div class="row gy-4 justify-content-center align-items-center mb-3">
-                <div class="col-lg-4">
-                    <div class="row mb-3">
-                        <div class="col-12 text-center">
-                            <button class="btn btn-brand btn-stats" onclick="reRenderChart(0)" data-aos="fade-up" data-aos-delay="100">Points</button>
-                        </div>
-                    </div>
-                    <div class="row mb-3">
-                        <div class="col-12 text-center">
-                            <button class="btn btn-brand btn-stats" onclick="reRenderChart(1)" data-aos="fade-up" data-aos-delay="200">3-PM</button>
-                        </div>
-                    </div>
-                    <div class="row mb-3">
-                        <div class="col-12 text-center">
-                            <button class="btn btn-brand btn-stats" onclick="reRenderChart(2)" data-aos="fade-up" data-aos-delay="300">2-PM</button>
-                        </div>
-                    </div>
-                    <div class="row mb-3">
-                        <div class="col-12 text-center">
-                            <button class="btn btn-brand btn-stats" onclick="reRenderChart(3)" data-aos="fade-up" data-aos-delay="400">Assists</button>
-                        </div>
-                    </div>
-                    <div class="row mb-3">
-                        <div class="col-12 text-center">
-                            <button class="btn btn-brand btn-stats" onclick="reRenderChart(4)" data-aos="fade-up" data-aos-delay="500">Assists-TO Ratio (Average)</button>
-                        </div>
-                    </div>
-                    <div class="row mb-3">
-                        <div class="col-12 text-center">
-                            <button class="btn btn-brand btn-stats" onclick="reRenderChart(5)" data-aos="fade-up" data-aos-delay="600">Steals</button>
-                        </div>
-                    </div>
+                <div class="col-4 text-center">
+                    <button class="btn btn-brand btn-stats" onclick="reRenderChart(0)" data-aos="fade-up" data-aos-delay="100">Points</button>
                 </div>
-                <div class="col-lg-8 p-3">
-                    <div class="row">
-                        <canvas id="stats-chart" data-aos="fade-up" data-aos-delay="700"></canvas>
-                    </div>
+                <div class="col-4 text-center">
+                    <button class="btn btn-brand btn-stats" onclick="reRenderChart(1)" data-aos="fade-up" data-aos-delay="100">3-PM</button>
                 </div>
+                <div class="col-4 text-center">
+                    <button class="btn btn-brand btn-stats" onclick="reRenderChart(2)" data-aos="fade-up" data-aos-delay="100">2-PM</button>
+                </div>
+            </div>
+            <div class="row gy-4 justify-content-center align-items-center mb-3">
+                <div class="col-4 text-center">
+                    <button class="btn btn-brand btn-stats" onclick="reRenderChart(3)" data-aos="fade-up" data-aos-delay="200">Assists</button>
+                </div>
+                <div class="col-4 text-center">
+                    <button class="btn btn-brand btn-stats" onclick="reRenderChart(4)" data-aos="fade-up" data-aos-delay="200">Ast/TO Ratio</button>
+                </div>
+                <div class="col-4 text-center">
+                    <button class="btn btn-brand btn-stats" onclick="reRenderChart(5)" data-aos="fade-up" data-aos-delay="200">Steals</button>
+                </div>
+            </div>
+            <div id="stats-chart-container" data-aos="fade-up" data-aos-delay="300">
+                <canvas id="stats-chart"></canvas>
             </div>
         </div>
     </section>
+
     <section id="stats-summary" class="section-padding section-connector">
         <div class="container">
             <div class="row">
@@ -308,43 +295,18 @@
                 </div>
             </div>
             <div class="row gy-4 text-center justify-content-center mt-3">
-                <div class="col-lg-3 col-sm-6" data-aos="fade-up" data-aos-delay="100">
+                <div class="col-lg-6 col-sm-6" data-aos="fade-up" data-aos-delay="100">
                     <div class="service py-5 px-4 border text-center">
                         <div class="service-icon">
                             <i class="ri-basketball-line"></i>
                         </div>
-                        <h5 class="mt-4">15.1</h5>
-                        <small class="text-brand">Points per Game</small>
-                        <p>Insert game high points made...</p>
-                        <a href="#" class="custom-link">
-                            <span>Read More</span>
-                            <i class="ri-arrow-right-line"></i>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-sm-6" data-aos="fade-up" data-aos-delay="200">
-                    <div class="service py-5 px-4 border text-center">
-                        <div class="service-icon">
-                            <i class="ri-basketball-line"></i>
-                        </div>
-                        <h5 class="mt-4">45%</h5>
-                        <small class="text-brand">3-Point Shooting Percentage</small>
-                        <p>Insert game high 3-pointers made...</p>
-                        <a href="#" class="custom-link">
-                            <span>Read More</span>
-                            <i class="ri-arrow-right-line"></i>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-sm-6" data-aos="fade-up" data-aos-delay="300">
-                    <div class="service py-5 px-4 border text-center">
-                        <div class="service-icon">
-                            <i class="ri-basketball-line"></i>
-                        </div>
-                        <h5 class="mt-4">4.7</h5>
-                        <small class="text-brand">Assists per Game</small>
-                        <p>Insert game high assist</p>
-                        <a href="https://www.coastalelite.org/" class="custom-link">
+                        <h5 class="mt-4">Bigfoot Las Vegas Classic</h5>
+                        <small class="text-brand">July 2022 Showcase Tournament</small>
+                        <p>14 pts vs Tacoma Flyers | 4 3PM | 46.7% FG%</p>
+                        <p>17 pts vs Wildcats | 5 3PM | 77.3% FG%</p>
+                        <p>25 pts vs Bakersfield All Out | 5 3PM | 60.5% FG%</p>
+                        <p>13 pts vs Play The Right Way | 3 3PM | 30.0% FG%</p>
+                        <a href="https://bigfoothoops.com/vegas-classic/" class="custom-link">
                             <span>Read More</span>
                             <i class="ri-arrow-right-line"></i>
                         </a>

@@ -43,6 +43,13 @@ function displayChart(catIndex) {
             }
         }
 
+        const oppData = [];
+        for (let i = 1; i == 1; i++) {
+            for (let j = 1; j < cols.length; j++) {
+                oppData.push(rows[i].c[j].f)
+            }
+        }
+
         const chartData = {
             labels: dates,
             datasets: [{
@@ -58,17 +65,23 @@ function displayChart(catIndex) {
             data: chartData,
             options: {
                 responsive: true,
+                maintainAspectRatio: false,
                 scales: {
                     x: {
                         display: true,
                         text: 'Date',
                         ticks: {
                             callback: function(val, index) {
-                                return index % 3 === 0? this.getLabelForValue(val) : '';
+                                return index % 2 === 0? this.getLabelForValue(val) : '';
                             },
-                            minRotation: 90,
-                            maxRotation: 90,
+                            minRotation: 75,
+                            maxRotation: 75,
+                            fontSize: 2
                         }
+                    },
+                    y: {
+                        display: true,
+                        text: 'Stat Game Value'
                     }
                 }
             }
