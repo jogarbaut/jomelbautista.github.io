@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="./assets/css/style.css">
     <title>Derek Tuason | Athlete Profile</title>
@@ -36,9 +35,9 @@
                     <!-- <li class="nav-item">
                         <a class="nav-link" href="#work">Teams & Stats</a>
                     </li> -->
-                    <li class="nav-item">
+                    <!-- <li class="nav-item">
                         <a class="nav-link" href="#contact">Contact</a>
-                    </li>
+                    </li> -->
                 </ul>
                 <ul class="navbar-nav flex-row">
                     <li class="nav-item">
@@ -255,7 +254,60 @@
                     </div>
                 </div>
             </div>
-            <div class="row gy-4 text-center justify-content-center">
+            <!-- Stats Line Chart -->
+            <div class="row gy-4 justify-content-center align-items-center mb-3">
+                <div class="col-lg-4">
+                    <div class="row mb-3">
+                        <div class="col-12 text-center">
+                            <button class="btn btn-brand btn-stats" onclick="reRenderChart(0)" data-aos="fade-up" data-aos-delay="100">Points</button>
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-12 text-center">
+                            <button class="btn btn-brand btn-stats" onclick="reRenderChart(1)" data-aos="fade-up" data-aos-delay="200">3-PM</button>
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-12 text-center">
+                            <button class="btn btn-brand btn-stats" onclick="reRenderChart(2)" data-aos="fade-up" data-aos-delay="300">2-PM</button>
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-12 text-center">
+                            <button class="btn btn-brand btn-stats" onclick="reRenderChart(3)" data-aos="fade-up" data-aos-delay="400">Assists</button>
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-12 text-center">
+                            <button class="btn btn-brand btn-stats" onclick="reRenderChart(4)" data-aos="fade-up" data-aos-delay="500">Assists-TO Ratio (Average)</button>
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-12 text-center">
+                            <button class="btn btn-brand btn-stats" onclick="reRenderChart(5)" data-aos="fade-up" data-aos-delay="600">Steals</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-8 p-3">
+                    <div class="row">
+                        <canvas id="stats-chart" data-aos="fade-up" data-aos-delay="700"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="stats-summary" class="section-padding section-connector">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="section-title text-center" data-aos="fade-up" data-aos-delay="100">
+                        <h1>Game Highs & Summaries</h1>
+                        <p></p>
+                        <div class="line"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="row gy-4 text-center justify-content-center mt-3">
                 <div class="col-lg-3 col-sm-6" data-aos="fade-up" data-aos-delay="100">
                     <div class="service py-5 px-4 border text-center">
                         <div class="service-icon">
@@ -301,6 +353,7 @@
             </div>
         </div>
     </section>
+
     <section id="gamelog" class="section-padding section-connector">
         <div class="container">
             <div class="row">
@@ -396,128 +449,8 @@
         </div>
     </section>
 
-    <!-- Work -->
-    <!-- <section id="work" class="section-padding section-connector">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-12">
-                    <div class="section-title text-center" data-aos="fade-up" data-aos-delay="100">
-                        <h1>Work</h1>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente repellat molestias quos, non ipsum quia beatae, eum cumque maxime, minima veritatis culpa quo! Odio, odit! Magnam quis quos ut asperiores?</p>
-                        <div class="line"></div>
-                    </div>
-                </div>
-            </div>
-            <div class="row g-2">
-                <div class="col-lg-4 col-sm-6" data-aos="fade-up" data-aos-delay="100">
-                    <div class="project">
-                        <img src="./assets/img/coming-soon.jpeg" alt="">
-                        <div class="content">
-                            <a href="./assets/img/coming-soon.jpeg" data-fancybox="gallery" class="btn btn-outline-light">View Project</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-sm-6" data-aos="fade-up" data-aos-delay="200">
-                    <div class="project">
-                        <img src="./assets/img/coming-soon-2.jpeg" alt="">
-                        <div class="content">
-                            <a href="./assets/img/coming-soon-2.jpeg" data-fancybox="gallery" class="btn btn-outline-light">View Project</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-sm-6" data-aos="fade-up" data-aos-delay="300">
-                    <div class="project">
-                        <img src="./assets/img/coming-soon-3.jpeg" alt="">
-                        <div class="content">
-                            <a href="./assets/img/coming-soon-3.jpeg" data-fancybox="gallery" class="btn btn-outline-light">View Project</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-sm-6" data-aos="fade-up" data-aos-delay="100">
-                    <div class="project">
-                        <img src="./assets/img/coming-soon-4.jpeg" alt="">
-                        <div class="content">
-                            <a href="./assets/img/coming-soon-4.jpeg" data-fancybox="gallery" class="btn btn-outline-light">View Project</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-sm-6" data-aos="fade-up" data-aos-delay="200">
-                    <div class="project">
-                        <img src="./assets/img/coming-soon-5.jpeg" alt="">
-                        <div class="content">
-                            <a href="./assets/img/coming-soon-5.jpeg" data-fancybox="gallery" class="btn btn-outline-light">View Project</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-sm-6" data-aos="fade-up" data-aos-delay="300">
-                    <div class="project">
-                        <img src="./assets/img/coming-soon-6.jpeg" alt="">
-                        <div class="content">
-                            <a href="./assets/img/coming-soon-6.jpeg" data-fancybox="gallery" class="btn btn-outline-light">View Project</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="section-padding pb-0">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12">
-                        <div class="section-title text-center" data-aos="fade-up" data-aos-delay="100">
-                            <h1>Clients I've Worked With</h1>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente repellat molestias quos, non ipsum quia beatae, eum cumque maxime, minima veritatis culpa quo! Odio, odit! Magnam quis quos ut asperiores?</p>
-                            <div class="line"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row g-0">
-                    <div class="col-lg-3 col-sm-6" data-aos="fade-up" data-aos-delay="100">
-                        <div class="client p-5 border">
-                            <img src="./assets/img/logo01.svg" alt="">
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-sm-6" data-aos="fade-up" data-aos-delay="200">
-                        <div class="client p-5 border">
-                            <img src="./assets/img/logo02.svg" alt="">
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-sm-6" data-aos="fade-up" data-aos-delay="300">
-                        <div class="client p-5 border">
-                            <img src="./assets/img/logo03.svg" alt="">
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-sm-6" data-aos="fade-up" data-aos-delay="400">
-                        <div class="client p-5 border">
-                            <img src="./assets/img/logo04.svg" alt="">
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-sm-6" data-aos="fade-up" data-aos-delay="100">
-                        <div class="client p-5 border">
-                            <img src="./assets/img/logo05.svg" alt="">
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-sm-6" data-aos="fade-up" data-aos-delay="200">
-                        <div class="client p-5 border">
-                            <img src="./assets/img/logo06.svg" alt="">
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-sm-6" data-aos="fade-up" data-aos-delay="300">
-                        <div class="client p-5 border">
-                            <img src="./assets/img/logo07.svg" alt="">
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-sm-6" data-aos="fade-up" data-aos-delay="400">
-                        <div class="client p-5 border">
-                            <img src="./assets/img/logo08.svg" alt="">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section> -->
-
     <!-- Contact -->
-    <section id="contact" class="section-padding section-connector">
+    <!-- <section id="contact" class="section-padding section-connector">
         <div class="container">
             <div class="row">
                 <div class="col-12">
@@ -553,7 +486,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
 
     <!-- Footer -->
     <footer>
@@ -578,7 +511,7 @@
                             <li><a href="#blog">Highlights</a></li>
                             <li><a href="#bio">Athlete Bio</a></li>
                             <li><a href="#stats">Stats & Gamelog</a></li>
-                            <li><a href="#contact">Contact</a></li>
+                            <!-- <li><a href="#contact">Contact</a></li> -->
                         </ul>
                     </div>
                     <div class="col-md-3">
@@ -607,8 +540,10 @@
 
     <!-- JavaScript Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
-    <!-- Fancybox -->
-    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+    <!-- Google Loader -->
+    <script src="https://www.gstatic.com/charts/loader.js"></script>
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <!-- Animate On Scroll -->
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <!-- Custom JavaScript -->
