@@ -177,7 +177,7 @@ iframe {
 
 #home .landing-text {
     position: relative;
-    margin-top: 75%;
+    margin-top: 60%;
 }
 
 #home .landing-text .background-mask {
@@ -297,6 +297,8 @@ iframe {
     top: 0;
 }
 
+/* Gamelog */
+
 /* Contact */
 #contact .form-control {
     border-radius: 0;
@@ -377,7 +379,7 @@ footer ul {
         padding-left: 16px;
     }
 
-    #blog, #updates, #bio, #stats, #stats-summary, #gamelog, #contact, footer {
+    #blog, #updates, #bio, #stats, #stats-summary, #contact, footer {
         padding-left: 7.5%;
         padding-right: 7.5%;
     }
@@ -399,4 +401,14 @@ footer ul {
         height: 100%;
         width: 100%;
     }
+
+    #gamelog {
+        padding-left: 2.5%;
+        padding-right: 2.5%;
+    }
+
+    #gamelog tr {
+        font-size: .5rem;
+    }
+    
 }
