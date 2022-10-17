@@ -104,7 +104,7 @@ iframe {
 .navbar .navbar-nav .nav-link {
     font-weight: 700;
     color: var(--c-dark);
-    margin: 0 20px;
+    margin: 0 10px;
 }
 
 .navbar .navbar-nav .nav-link:hover, .navbar .navbar-nav .nav-link.active {
@@ -357,15 +357,15 @@ footer ul {
 #stats-chart-container {
     margin-top: 50px;
     height: 675px;
-    width: 50%;
+    width: 65%;
     justify-content: center;
     text-align: center;
     align-items: center;
 }
 
 #shooting-split-container {
-    height: 100%;
-    width: 65%;
+    height: 65%;
+    width: 60%;
 }
 
 

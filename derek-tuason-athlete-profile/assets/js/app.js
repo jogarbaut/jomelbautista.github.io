@@ -141,12 +141,12 @@ function displayShotingSplitPolarData() {
     const data = {
         labels: [
             ['50.23%','2-Point Shooting'],
-            ['75.45%','Freethrow Shooting'],
-            ['58.90%','True Shooting'],
+            ['59.10%','Effective FG', 'Shooting'],
+            ['58.90%','True FG', 'Shooting'],
             ['41.43%','3-Point Shooting']
         ],
         datasets: [{
-            data: [50.23, 75.45, 58.90, 41.43],
+            data: [50.23, 59.10, 58.90, 41.43],
             backgroundColor: [
             'rgba(196, 179, 94, .5)',
             'rgba(196, 179, 94, .5)',
