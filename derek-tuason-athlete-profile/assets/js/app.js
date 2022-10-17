@@ -1,4 +1,5 @@
 window.addEventListener('load', displayChart(0));
+window.addEventListener('load', displayShotingSplitPolarData());
 
 window.onscroll = function() {
     if (document.body.scrollTop > 0 || document.documentElement.scrollTop > 0 ) {
@@ -13,7 +14,7 @@ AOS.init({
     duration: 750
 });
 
-// Stats Chart 
+// Stats Line Chart 
 let statsChart = document.getElementById('stats-chart')
 
 function displayChart(catIndex) {
@@ -66,29 +67,64 @@ function displayChart(catIndex) {
             options: {
                 responsive: true,
                 maintainAspectRatio: false,
+                interaction: {
+                    intersect: false,
+                    mode: 'index',
+                },
                 scales: {
                     x: {
                         display: true,
                         text: 'Date',
                         ticks: {
+                            font: function(context) {
+                                var width = context.chart.width;
+                                var size = Math.round(width/32);
+                                if ( width >= 400 ) {
+                                    return {
+                                        weight: 'normal',
+                                        size: 10
+                                    }
+                                } else {
+                                    return {
+                                        weight: 'normal',
+                                        size: size
+                                    };
+                                }
+                            },
                             callback: function(val, index) {
                                 return index % 2 === 0? this.getLabelForValue(val) : '';
                             },
                             minRotation: 75,
                             maxRotation: 75,
-                            fontSize: 2
                         }
                     },
                     y: {
                         display: true,
-                        text: 'Stat Game Value'
+                        text: 'Stat Game Value',
+                        ticks: {
+                            font: function(context) {
+                                var width = context.chart.width;
+                                var size = Math.round(width/32);
+                                if ( width >= 400 ) {
+                                    return {
+                                        weight: 'normal',
+                                        size: 10
+                                    }
+                                } else {
+                                    return {
+                                        weight: 'normal',
+                                        size: size
+                                    }
+                                }
+                            },
+                        }
                     }
                 }
             }
         }
         
         renderChart(config)
-    });
+    })
 }
 
 function renderChart(config) {
@@ -96,6 +132,106 @@ function renderChart(config) {
 }
 
 function reRenderChart(catIndex) {
-    statsChart.destroy();
-    displayChart(catIndex);
+    statsChart.destroy()
+    displayChart(catIndex)
 }
+
+// Shooting Splits Polar Chart
+function displayShotingSplitPolarData() {
+    const data = {
+        labels: [
+            ['50.23%','2-Point Shooting'],
+            ['75.45%','Freethrow Shooting'],
+            ['58.90%','True Shooting'],
+            ['41.43%','3-Point Shooting']
+        ],
+        datasets: [{
+            data: [50.23, 75.45, 58.90, 41.43],
+            backgroundColor: [
+            'rgba(196, 179, 94, .5)',
+            'rgba(196, 179, 94, .5)',
+            'rgba(196, 179, 94, .5)',
+            'rgba(196, 179, 94, .5)'
+            ],
+            borderColor: [
+                'rgba(196, 179, 94, 1)',
+                'rgba(196, 179, 94, 1)',
+                'rgba(196, 179, 94, 1)',
+                'rgba(196, 179, 94, 1)'
+            ]
+        }]
+    }
+    
+    const config = {
+        type: 'polarArea',
+        data: data,
+        options: {
+            responsive: true,
+            hoverBackgroundColor: 'red',
+            hoverBorderColor: 'red',
+            scales: {
+                r: {
+                    pointLabels: {
+                        display: true,
+                        centerPointLabels: true,
+                        arc: true,
+                        font: {
+                            weight: 'bold',
+                            size: function(context) {
+                                var width = context.chart.width;
+                                var size = Math.round(width/45);
+                                if ( width >= 400 ) {
+                                    return 16
+                                } else {
+                                    return size
+                                }
+                            }
+                        }
+                    },
+                    ticks: {
+                        callback: function(value, index, ticks) {
+                            return value + '%'
+                        },
+                        z: 1,
+                        font: {
+                            size: function(context) {
+                                var width = context.chart.width;
+                                var size = Math.round(width/45);
+                                if ( width >= 400 ) {
+                                    return 12
+                                } else {
+                                    return size
+                                }
+                            }
+                        }
+                    },
+                    min: 0,
+                    max: 90
+                }
+            },
+            plugins: {
+                legend: {
+                    display: false
+                },
+                tooltip: {
+                    callbacks: {
+                        label: function(context) {
+                            label = [("Derek has a " + context.label[1]), (" percentage of " + context.label[0])]
+                            return label
+                        }
+                    }
+                }
+            }
+        }
+    };
+    
+    // renderPolarChart(config);
+    const myChart = new Chart(
+        document.getElementById('shooting-split-chart'),
+        config
+    );
+}
+
+// function renderPolarChart(config) {
+//     statsChart = new Chart(document.getElementById('shooting-split-chart'), config)
+// }

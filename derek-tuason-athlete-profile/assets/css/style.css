@@ -177,6 +177,7 @@ iframe {
 
 #home .landing-text {
     position: relative;
+    margin-top: 75%;
 }
 
 #home .landing-text .background-mask {
@@ -345,9 +346,8 @@ footer ul {
 
 /* Stats Chart */
 .btn-stats { 
-    width: 100%;
+    width: 80%;
     height: 100%;
-    margin: 0;
 }
 
 .btn-stats {
@@ -356,10 +356,16 @@ footer ul {
 
 #stats-chart-container {
     margin-top: 50px;
-    height: 750px;
+    height: 675px;
+    width: 50%;
     justify-content: center;
     text-align: center;
     align-items: center;
+}
+
+#shooting-split-container {
+    height: 100%;
+    width: 65%;
 }
 
 
@@ -378,9 +384,19 @@ footer ul {
 
     .btn-stats {
         font-size: .5rem;
+        width: 100%;
     }
 
     #stats-chart-container {
-        height: 550px;
+        height: 450px;
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+    }
+
+    #shooting-split-container {
+        height: 100%;
+        width: 100%;
     }
 }
