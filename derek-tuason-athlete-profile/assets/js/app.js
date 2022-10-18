@@ -43,7 +43,6 @@ function generateTableData() {
                 }
             }
         }
-
         generateTable(tableData)
     });
 }
@@ -57,17 +56,17 @@ function generateTable(tableData) {
     }
     tableHeader += "</tr>" + "</thead>"
 
-    console.log(tableData)
-
     let tableBody = "<tbody>"
+    let tableRows = ""
     for (i = 1; i < tableData[0].length; i++) {
-        tableBody += "<tr>"
+        let tableRow = "<tr>"
+        let tableRowCell = ""
         for (j = 0; j < tableData.length; j++) {
-            tableBody += "<td>" + tableData[j][i] + "</td>"
+            tableRowCell += "<td>" + tableData[j][i] + "</td>"
         }
-        tableBody += "</tr>"
+        tableRows = tableRow + tableRowCell + "</tr>" + tableRows
     }
-    tableBody += "</tbody>"
+    tableBody += tableRows + "</tbody>"
 
     table += tableHeader + tableBody + "</table>"
     document.getElementById('gamelog-table').innerHTML = table;
@@ -88,7 +87,6 @@ function makeTableScroll() {
         }
         wrapper.style.height = height + "px";
     }
-    console.log(height)
 }
 
 // Stats Line Chart 
@@ -217,13 +215,13 @@ function reRenderChart(catIndex) {
 function displayShotingSplitPolarData() {
     const data = {
         labels: [
-            ['50.23%','2-Point Shooting'],
+            ['49.53%','2-Point Shooting'],
             ['59.10%','Effective FG', 'Shooting'],
             ['58.90%','True FG', 'Shooting'],
-            ['41.43%','3-Point Shooting']
+            ['41.50%','3-Point Shooting']
         ],
         datasets: [{
-            data: [50.23, 59.10, 58.90, 41.43],
+            data: [49.53, 59.10, 58.90, 41.50],
             backgroundColor: [
             'rgba(196, 179, 94, .5)',
             'rgba(196, 179, 94, .5)',

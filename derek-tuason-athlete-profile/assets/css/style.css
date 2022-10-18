@@ -177,7 +177,7 @@ iframe {
 
 #home .landing-text {
     position: relative;
-    margin-top: 60%;
+    margin-top: 30%;
 }
 
 #home .landing-text .background-mask {
@@ -298,6 +298,23 @@ iframe {
 }
 
 /* Gamelog */
+#gamelog thead {
+    position: sticky; 
+    top: 0; 
+    z-index: 1;
+    text-align: left;
+    background-color: var(--c-brand);
+    color: white;
+}
+
+#gamelog td {
+    text-align: left;
+    white-space: nowrap;
+}
+
+#gaemlog .table-responsive {
+    overflow: auto;
+}
 
 /* Contact */
 #contact .form-control {
@@ -367,7 +384,7 @@ footer ul {
 
 #shooting-split-container {
     height: 65%;
-    width: 60%;
+    width: 40%;
 }
 
 
@@ -403,8 +420,8 @@ footer ul {
     }
 
     #gamelog {
-        padding-left: 2.5%;
-        padding-right: 2.5%;
+        padding-left: 5%;
+        padding-right: 5%;
     }
 
     #gamelog tr {
