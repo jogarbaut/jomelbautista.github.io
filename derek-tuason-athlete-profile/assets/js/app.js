@@ -1,5 +1,6 @@
 window.addEventListener('load', displayChart(0));
 window.addEventListener('load', displayShotingSplitPolarData());
+window.addEventListener('load', generateTableData());
 
 window.onscroll = function() {
     if (document.body.scrollTop > 0 || document.documentElement.scrollTop > 0 ) {
@@ -13,6 +14,82 @@ window.onscroll = function() {
 AOS.init({
     duration: 750
 });
+
+// Gamelog Table
+function generateTableData() {
+    const url = 'https://docs.google.com/spreadsheets/d/'
+    const ssid = '1cWHZTlFdr5W7EEcML5ZPwyPj2504u8S3ZbW62GRGV7Y'
+    const query = `/gviz/tq?`
+    const querySheet = 'sheet=Web-Gamelog'
+    const endPoint = `${url}${ssid}${query}${querySheet}`
+
+    fetch(endPoint)
+    .then(res => res.text())
+    .then(data => {
+        const temp = data.substring(47).slice(0, -2);
+        const json = JSON.parse(temp);
+
+        const cols = json.table.cols;
+        const rows = json.table.rows;
+
+        const tableData = []
+        for (i = 0; i < rows.length; i ++) {
+            tableData.push([])
+            for (j = 0; j < cols.length; j ++) {
+                if (rows[i].c[j].v == null) {
+                    tableData[i].push('0')
+                } else {
+                    tableData[i].push(rows[i].c[j].v)
+                }
+            }
+        }
+
+        generateTable(tableData)
+    });
+}
+
+function generateTable(tableData) {
+    let table = "<table>"
+
+    let tableHeader = "<thead><tr>"
+    for (i = 0; i < tableData.length; i ++) {
+        tableHeader += "<th scope='col'>" + tableData[i][0]+ "</th>"
+    }
+    tableHeader += "</tr>" + "</thead>"
+
+    console.log(tableData)
+
+    let tableBody = "<tbody>"
+    for (i = 1; i < tableData[0].length; i++) {
+        tableBody += "<tr>"
+        for (j = 0; j < tableData.length; j++) {
+            tableBody += "<td>" + tableData[j][i] + "</td>"
+        }
+        tableBody += "</tr>"
+    }
+    tableBody += "</tbody>"
+
+    table += tableHeader + tableBody + "</table>"
+    document.getElementById('gamelog-table').innerHTML = table;
+    makeTableScroll()
+}
+
+function makeTableScroll() {
+    // Constant retrieved from server-side via JSP
+    var maxRows = 8;
+
+    var table = document.getElementById('gamelog-table');
+    var wrapper = table.parentNode;
+    var rowsInTable = table.rows.length;
+    var height = 0;
+    if (rowsInTable > maxRows) {
+        for (var i = 0; i < maxRows; i++) {
+            height += table.rows[i].clientHeight;
+        }
+        wrapper.style.height = height + "px";
+    }
+    console.log(height)
+}
 
 // Stats Line Chart 
 let statsChart = document.getElementById('stats-chart')
