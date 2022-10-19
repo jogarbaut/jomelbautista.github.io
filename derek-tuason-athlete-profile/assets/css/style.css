@@ -455,4 +455,12 @@ footer ul {
         height: 250px;
     }
     
+    .twitter-header {
+        font-size: .85rem;
+    }
+
+    .blog-post-content {
+        font-size: .75rem;
+    }
+
 }
