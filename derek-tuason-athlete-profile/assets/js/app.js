@@ -291,7 +291,7 @@ function displayShotingSplitPolarData() {
                 tooltip: {
                     callbacks: {
                         label: function(context) {
-                            label = [("Derek has a " + context.label[1]), (" percentage of " + context.label[0])]
+                            label = [("Derek has a " + context.label[1]), (" of " + context.label[0])]
                             return label
                         }
                     }
