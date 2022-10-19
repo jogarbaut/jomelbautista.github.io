@@ -54,7 +54,7 @@ img {
 }
 
 .section-title .line {
-    width: 60px;
+    width: 150px;
     height: 2px;
     background-color: var(--c-brand);
     display: inline-block;
@@ -74,9 +74,31 @@ img {
     left: 50%;
 }
 
+.sub-section-row {
+    margin-bottom: 30px;
+}
+
+.sub-section-title {
+    max-width: 560px;
+    margin: 0 auto 10px auto;
+}
+
+.sub-section-title p {
+    margin-bottom: 0px;
+}
+
+.sub-section-title .line {
+    width: 90px;
+    height: 2px;
+    background-color: var(--c-brand);
+    display: inline-block;
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+
 iframe {
     width: 100%;
-    height: 350px;
+    height: 275px;
 }
 
 /* Navbar */
@@ -426,6 +448,11 @@ footer ul {
 
     #gamelog tr {
         font-size: .5rem;
+    }
+
+    iframe {
+        width: 100%;
+        height: 250px;
     }
     
 }

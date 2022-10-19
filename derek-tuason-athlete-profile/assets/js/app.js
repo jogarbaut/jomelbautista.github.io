@@ -215,10 +215,10 @@ function reRenderChart(catIndex) {
 function displayShotingSplitPolarData() {
     const data = {
         labels: [
-            ['49.53%','2-Point Shooting'],
-            ['59.10%','Effective FG', 'Shooting'],
-            ['58.90%','True FG', 'Shooting'],
-            ['41.50%','3-Point Shooting']
+            ['49.53%','2-Point FG%'],
+            ['59.10%','eFG%'],
+            ['58.90%','TS%'],
+            ['41.50%','3-Point FG%']
         ],
         datasets: [{
             data: [49.53, 59.10, 58.90, 41.50],
@@ -254,7 +254,7 @@ function displayShotingSplitPolarData() {
                             weight: 'bold',
                             size: function(context) {
                                 var width = context.chart.width;
-                                var size = Math.round(width/45);
+                                var size = Math.round(width/32);
                                 if ( width >= 400 ) {
                                     return 16
                                 } else {
@@ -271,7 +271,7 @@ function displayShotingSplitPolarData() {
                         font: {
                             size: function(context) {
                                 var width = context.chart.width;
-                                var size = Math.round(width/45);
+                                var size = Math.round(width/40);
                                 if ( width >= 400 ) {
                                     return 12
                                 } else {
@@ -281,7 +281,7 @@ function displayShotingSplitPolarData() {
                         }
                     },
                     min: 0,
-                    max: 90
+                    max: 80
                 }
             },
             plugins: {
